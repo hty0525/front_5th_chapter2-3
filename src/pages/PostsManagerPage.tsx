@@ -25,6 +25,7 @@ import {
   TableRow,
   Textarea,
 } from "../shared/ui"
+import { postApis } from "../entities/post/api/apis"
 
 const PostsManager = () => {
   const navigate = useNavigate()
@@ -66,6 +67,10 @@ const PostsManager = () => {
     if (selectedTag) params.set("tag", selectedTag)
     navigate(`?${params.toString()}`)
   }
+
+  useEffect(() => {
+    postApis.getPostList({ limit, skip })
+  }, [])
 
   // 게시물 가져오기
   const fetchPosts = () => {

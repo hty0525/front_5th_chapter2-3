@@ -1,3 +1,5 @@
+import { User } from "../../user/model/apis"
+
 export type GetPostListRequestParams = {
   limit: number
   skip: number
@@ -36,3 +38,7 @@ export type Tag = {
 export type PostAddPostRequestBody = Pick<Post, "title" | "body" | "userId">
 
 export type PutUpdatePostRequestBody = Post
+
+export type PostWithAuthor = Post & {
+  author?: User
+}
