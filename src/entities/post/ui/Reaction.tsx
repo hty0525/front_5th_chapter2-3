@@ -1,5 +1,5 @@
 import { ThumbsUp, ThumbsDown } from "lucide-react"
-import type { Reaction } from "../../entities/post/model/apis"
+import type { Reaction } from "../model/apis"
 
 type Props = Reaction
 

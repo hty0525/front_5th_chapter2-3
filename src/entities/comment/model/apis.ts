@@ -7,13 +7,11 @@ export type GetCommentListResponse = {
 
 export type PostCreateCommentRequestBody = Pick<CommentDetail, "body" | "postId"> & { userId: number }
 
-export type DeleteCommentRequestParams = Pick<CommentDetail, "id">
-
 export type PutUpdateCommentRequestBody = Pick<CommentDetail, "id" | "body">
 
 export type PatchLikeCommentRequestBody = {
-  likes: Pick<CommentDetail, "likes">
-  id: Pick<CommentDetail, "id">
+  likes: number
+  id: number
 }
 
 export type CommentDetail = {

@@ -25,6 +25,7 @@ export const postApis = {
   getPostTagList: async (): Promise<GetPostTagListResponse> => {
     return await fetchInstance(`${BASE_POST_URL}/tags`)
   },
+
   postCreatePost: async (requestBody: PostAddPostRequestBody) => {
     return await fetchInstance(`${BASE_POST_URL}/add`, {
       method: "POST",
