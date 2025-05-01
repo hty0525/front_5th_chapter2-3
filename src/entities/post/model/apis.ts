@@ -3,6 +3,8 @@ import { User } from "../../user/model/apis"
 export type GetPostListRequestParams = {
   limit: number
   skip: number
+  search: string
+  tag: string
 }
 
 export type GetPostListResponse = {
